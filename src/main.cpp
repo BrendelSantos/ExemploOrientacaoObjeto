@@ -2,6 +2,8 @@
 
 #include "Banheiro.hpp"
 #include "Quarto.hpp"
+#include "Sala.hpp"
+#include "Casa.hpp"
 
 int main()
 {
@@ -15,5 +17,11 @@ int main()
 
     cout << quarto->getAltura() << endl;
     cout << quarto->getBanheiro()->getAltura() << endl;
+
+    Casa* casa = new Casa();
+    casa->adicionarBanheiro(banheiro);
+    
+    cout << casa->getQuantidadeBanheiro() << endl;
+
 
 }
