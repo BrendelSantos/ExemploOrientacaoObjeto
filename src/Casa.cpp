@@ -31,7 +31,17 @@ void Casa::adicionarBanheiro(Banheiro *banheiro)
 
 int Casa::getQuantidadeBanheiro()
 {
-    return this->banheiros.size();
+    int quantidadeBanheiroQuartos = 0;
+    Quarto *quarto;
+
+    for (vector<Quarto *>::iterator it = quartos.begin(); it != quartos.end(); it++)
+    {
+        quarto = it.operator*();
+        if (quarto->getBanheiro())
+            quantidadeBanheiroQuartos++;
+    }
+
+    return this->banheiros.size() + quantidadeBanheiroQuartos;
 }
 
 void Casa::adicionarQuarto(Quarto *quarto)

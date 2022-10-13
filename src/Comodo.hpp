@@ -23,6 +23,8 @@ public:
     float getLargura();
     float getComprimento();
     float getAltura();
+
+    float getArea();
 };
 
 #endif // COMODO_H_

@@ -16,10 +16,10 @@ class Casa
 
 private:
     string endereco;
-    vector<Comodo *> banheiros;
-    vector<Comodo *> cozinhas;
-    vector<Comodo *> quartos;
-    vector<Comodo *> salas;
+    vector<Banheiro *> banheiros;
+    vector<Cozinha *> cozinhas;
+    vector<Quarto *> quartos;
+    vector<Sala *> salas;
 
 public:
     Casa();

@@ -6,6 +6,7 @@ Quarto::Quarto()
 
 Quarto::~Quarto()
 {
+    delete banheiro;
 }
 
 void Quarto::setTemArmario(bool temArmario)

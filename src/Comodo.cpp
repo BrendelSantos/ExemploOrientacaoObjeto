@@ -37,3 +37,8 @@ float Comodo::getAltura()
 {
     return this->altura;
 }
+
+float Comodo::getArea()
+{
+    return this->largura * this->comprimento;
+}
