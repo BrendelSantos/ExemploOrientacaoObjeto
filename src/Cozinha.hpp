@@ -10,12 +10,13 @@ class Cozinha : public Comodo
 {
 
 private:
-    int quantidadeArmarios;
+    bool temPia;
 
 public:
     Cozinha();
     ~Cozinha();
-    void setQuantidadeArmarios(bool quantidadeArmarios);
+    void setTemPia(bool temPia);
+    bool getTemPia();
 };
 
 #endif // COZINHA_H_

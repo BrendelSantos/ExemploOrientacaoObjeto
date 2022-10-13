@@ -3,27 +3,9 @@
 #include "Banheiro.hpp"
 #include "Quarto.hpp"
 #include "Sala.hpp"
+#include "Cozinha.hpp"
 #include "Casa.hpp"
-
-Quarto* construirQuarto(float largura, float comprimento, float altura) 
-{
-    Quarto *quarto = new Quarto();
-    quarto->setLargura(largura);
-    quarto->setComprimento(comprimento);
-    quarto->setAltura(altura);
-
-    return quarto;
-}
-
-Banheiro* construirBanheiro(float largura, float comprimento, float altura) 
-{
-    Banheiro *banheiro = new Banheiro();
-    banheiro->setLargura(largura);
-    banheiro->setComprimento(comprimento);
-    banheiro->setAltura(altura);
-
-    return banheiro;
-} 
+#include "Utilitario.hpp"
 
 int main()
 {
@@ -35,12 +17,19 @@ int main()
 
     banheiro = construirBanheiro(3.2f, 2.2f, 3);
 
+    Sala *sala = construirSala(4.4f, 4, 3);
+    Cozinha *cozinha = construirCozinha(4.4f, 5, 3);
+
     Casa *casa = new Casa();
     casa->adicionarBanheiro(banheiro);
     casa->adicionarQuarto(quarto);
+    casa->adicionarSala(sala);
+    casa->adicionarCozinha(cozinha);
 
     delete quarto; 
     delete banheiro; 
+    delete sala;
+    delete cozinha;
 
     quarto = construirQuarto(4, 4, 3);
     
@@ -50,6 +39,8 @@ int main()
 
     cout << casa->getQuantidadeBanheiro() << endl;
     cout << casa->getQuantidadeQuarto() << endl;
+    cout << casa->getQuantidadeSala() << endl;
+    cout << casa->getQuantidadeCozinha() << endl;
 
     delete casa;
 }

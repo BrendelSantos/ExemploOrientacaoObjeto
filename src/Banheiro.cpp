@@ -12,3 +12,8 @@ void Banheiro::setTemChuveiro(bool temChuveiro)
 {
     this->temChuveiro = temChuveiro;
 }
+
+bool Banheiro::getTemChuveiro()
+{
+    return this->temChuveiro;
+}

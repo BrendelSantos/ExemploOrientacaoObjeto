@@ -8,7 +8,12 @@ Cozinha::~Cozinha()
 {
 }
 
-void Cozinha::setQuantidadeArmarios(bool quantidadeArmarios)
+void Cozinha::setTemPia(bool temPia)
 {
-    this->quantidadeArmarios = quantidadeArmarios;
+    this->temPia = temPia;
+}
+
+bool Cozinha::getTemPia() 
+{
+    return this->temPia;
 }

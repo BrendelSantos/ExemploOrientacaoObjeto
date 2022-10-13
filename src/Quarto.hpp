@@ -18,6 +18,7 @@ public:
     Quarto();
     ~Quarto();
     void setTemArmario(bool temArmario);
+    bool getTemArmario();
     void setBanheiro(Banheiro *banheiro);
     Banheiro *getBanheiro();
 };

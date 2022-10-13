@@ -16,6 +16,7 @@ public:
     Banheiro();
     ~Banheiro();
     void setTemChuveiro(bool temChuveiro);
+    bool getTemChuveiro();
 };
 
 #endif // BANHEIRO_H_

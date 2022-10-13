@@ -14,6 +14,11 @@ void Quarto::setTemArmario(bool temArmario)
     this->temArmario = temArmario;
 }
 
+bool Quarto::getTemArmario() 
+{
+    return this->temArmario;
+}
+
 void Quarto::setBanheiro(Banheiro *banheiro)
 {
     this->banheiro = banheiro;

@@ -16,6 +16,7 @@ public:
     Sala();
     ~Sala();
     void setTemTv(bool temTv);
+    bool getTemTv();
 };
 
 #endif // SALA_H_
