@@ -26,16 +26,9 @@ int main()
     casa->adicionarSala(sala);
     casa->adicionarCozinha(cozinha);
 
-    delete quarto; 
-    delete banheiro; 
-    delete sala;
-    delete cozinha;
-
     quarto = construirQuarto(4, 4, 3);
     
     casa->adicionarQuarto(quarto);
-
-    delete quarto; 
 
     cout << casa->getQuantidadeBanheiro() << endl;
     cout << casa->getQuantidadeQuarto() << endl;

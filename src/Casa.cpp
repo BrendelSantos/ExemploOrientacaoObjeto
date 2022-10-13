@@ -34,9 +34,9 @@ int Casa::getQuantidadeBanheiro()
     int quantidadeBanheiroQuartos = 0;
     Quarto *quarto;
 
-    for (vector<Quarto *>::iterator it = quartos.begin(); it != quartos.end(); it++)
+    for (int i = 0; i < quartos.size(); i++)
     {
-        quarto = it.operator*();
+        quarto = quartos[i];
         if (quarto->getBanheiro())
             quantidadeBanheiroQuartos++;
     }
