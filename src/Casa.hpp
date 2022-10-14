@@ -21,9 +21,7 @@ private:
     vector<Comodo *> cozinhas;
     vector<Comodo *> quartos;
     vector<Comodo *> salas;
-
-    float area;
-
+    
 public:
     Casa();
     ~Casa();
@@ -39,7 +37,7 @@ public:
     int getQuantidadeSala();
 
     void exibirInformacoes();
-    void calcularArea();
+    float calcularAreaTotal();
 };
 
 #endif // CASA_H_

@@ -86,21 +86,23 @@ int Casa::getQuantidadeSala()
 
 void Casa::exibirInformacoes()
 {
-    this->calcularArea();
-    cout << "Endereco:  " << this->endereco << endl;
+    cout << "Informacoes do imovel:" << endl;
+    cout << "Endereco:  " << this->getEndereco() << endl;
     cout << "Possui     " << this->getQuantidadeBanheiro() << " Banheiros" << endl;
     cout << "Possui     " << this->getQuantidadeQuarto() << " Quartos" << endl;
     cout << "Possui     " << this->getQuantidadeSala() << " Salas" << endl;
     cout << "Possui     " << this->getQuantidadeCozinha() << " Cozinhas" << endl;
-    cout << "Area total do imovel:  " << this->area << " m2 " << endl;
-
-
+    cout << "Area:      " << this->calcularAreaTotal() << " m2 " << endl;
 }
 
-void Casa::calcularArea()
+float Casa::calcularAreaTotal()
 {
+    float area;
+
     area = getAreaArrayComodo(banheiros);
     area += getAreaArrayComodo(quartos);
     area += getAreaArrayComodo(cozinhas);
     area += getAreaArrayComodo(salas);
+
+    return area;
 }
