@@ -47,7 +47,7 @@ int Casa::getQuantidadeBanheiro()
     for (int i = 0; i < quartos.size(); i++)
     {
         quarto = dynamic_cast<Quarto *>(quartos[i]);
-        if (quarto->getBanheiro())
+        if (quarto->getBanheiro()->getArea() > 0.0f)
             quantidadeBanheiroQuartos++;
     }
 
@@ -88,7 +88,13 @@ void Casa::exibirInformacoes()
 {
     this->calcularArea();
     cout << "Endereco:  " << this->endereco << endl;
+    cout << "Possui     " << this->getQuantidadeBanheiro() << " Banheiros" << endl;
+    cout << "Possui     " << this->getQuantidadeQuarto() << " Quartos" << endl;
+    cout << "Possui     " << this->getQuantidadeSala() << " Salas" << endl;
+    cout << "Possui     " << this->getQuantidadeCozinha() << " Cozinhas" << endl;
     cout << "Area total do imovel:  " << this->area << " m2 " << endl;
+
+
 }
 
 void Casa::calcularArea()
