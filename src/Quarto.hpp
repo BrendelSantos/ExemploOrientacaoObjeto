@@ -21,6 +21,7 @@ public:
     bool getTemArmario();
     void setBanheiro(Banheiro *banheiro);
     Banheiro *getBanheiro();
+    virtual float getArea();
 };
 
 #endif // QUARTO_H_

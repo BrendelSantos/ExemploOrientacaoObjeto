@@ -2,6 +2,7 @@
 
 Quarto::Quarto()
 {
+    this->banheiro = new Banheiro();
 }
 
 Quarto::~Quarto()
@@ -27,4 +28,9 @@ void Quarto::setBanheiro(Banheiro *banheiro)
 Banheiro *Quarto::getBanheiro()
 {
     return this->banheiro;
+}
+
+float Quarto::getArea()
+{
+    return this->getLargura() * this->getComprimento() + this->getBanheiro()->getArea();
 }

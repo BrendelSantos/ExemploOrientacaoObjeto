@@ -12,15 +12,17 @@ int main()
 
     Banheiro *banheiro = construirBanheiro(1.2f, 2.2f, 3);
 
-    Quarto *quarto = construirQuarto(3, 4, 3);
+    Quarto *quarto = construirQuarto(3, 4, 3, true);
     quarto->setBanheiro(banheiro);
 
-    banheiro = construirBanheiro(3.2f, 2.2f, 3);
+    banheiro = construirBanheiro(3.2f, 2.2f, 3, true);
 
-    Sala *sala = construirSala(4.4f, 4, 3);
-    Cozinha *cozinha = construirCozinha(4.4f, 5, 3);
+    Sala *sala = construirSala(4.4f, 4, 3, true);
+
+    Cozinha *cozinha = construirCozinha(4.4f, 5, 3, true);
 
     Casa *casa = new Casa();
+    casa->setEndereco("Rua da casa, n 100");
     casa->adicionarBanheiro(banheiro);
     casa->adicionarQuarto(quarto);
     casa->adicionarSala(sala);
@@ -30,10 +32,7 @@ int main()
     
     casa->adicionarQuarto(quarto);
 
-    cout << casa->getQuantidadeBanheiro() << endl;
-    cout << casa->getQuantidadeQuarto() << endl;
-    cout << casa->getQuantidadeSala() << endl;
-    cout << casa->getQuantidadeCozinha() << endl;
+    casa->exibirInformacoes();
 
     delete casa;
 }

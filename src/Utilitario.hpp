@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "Comodo.hpp"
 #include "Quarto.hpp"
 #include "Banheiro.hpp"
@@ -20,5 +21,7 @@ extern Quarto *construirQuarto(float largura, float comprimento, float altura, b
 extern Banheiro *construirBanheiro(float largura, float comprimento, float altura, bool temChuveiro = false);
 extern Sala *construirSala(float largura, float comprimento, float altura, bool temTv = false);
 extern Cozinha *construirCozinha(float largura, float comprimento, float altura, bool temPia = false);
+
+extern float getAreaArrayComodo(vector<Comodo *> comodos);
 
 #endif // UTILITARIO_H_

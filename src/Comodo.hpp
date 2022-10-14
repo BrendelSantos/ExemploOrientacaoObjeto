@@ -14,7 +14,7 @@ private:
 
 public:
     Comodo();
-    ~Comodo();
+    virtual ~Comodo();
 
     void setLargura(float largura);
     void setComprimento(float comprimento);
@@ -24,7 +24,7 @@ public:
     float getComprimento();
     float getAltura();
 
-    float getArea();
+    virtual float getArea();
 };
 
 #endif // COMODO_H_

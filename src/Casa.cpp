@@ -24,6 +24,16 @@ Casa::~Casa()
     }
 }
 
+void Casa::setEndereco(string endereco)
+{
+    this->endereco = endereco;
+}
+
+string Casa::getEndereco()
+{
+    return this->endereco;
+}
+
 void Casa::adicionarBanheiro(Banheiro *banheiro)
 {
     this->banheiros.push_back(banheiro);
@@ -36,7 +46,7 @@ int Casa::getQuantidadeBanheiro()
 
     for (int i = 0; i < quartos.size(); i++)
     {
-        quarto = quartos[i];
+        quarto = dynamic_cast<Quarto *>(quartos[i]);
         if (quarto->getBanheiro())
             quantidadeBanheiroQuartos++;
     }
@@ -72,4 +82,19 @@ void Casa::adicionarSala(Sala *sala)
 int Casa::getQuantidadeSala()
 {
     return this->salas.size();
+}
+
+void Casa::exibirInformacoes()
+{
+    this->calcularArea();
+    cout << "Endereco:  " << this->endereco << endl;
+    cout << "Area total do imovel:  " << this->area << " m2 " << endl;
+}
+
+void Casa::calcularArea()
+{
+    area = getAreaArrayComodo(banheiros);
+    area += getAreaArrayComodo(quartos);
+    area += getAreaArrayComodo(cozinhas);
+    area += getAreaArrayComodo(salas);
 }
