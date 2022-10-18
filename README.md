@@ -18,7 +18,7 @@ O contexto que o projeto busca representar é uma casa, com seus respectivos cô
 
 ### Como usar
 
-Para compilar e executar o projeto o comando a seguir poder ser utilizado
+Para compilar e executar o projeto, navegue para a pasta ```src/``` e execute o seguinte comando:
 
 ```console
  g++ -static -g $(find -type f -iregex ".*\.cpp") -o arquivoSaida && ./arquivoSaida.exe
